@@ -152,8 +152,9 @@ require('lazy').setup({
   --  This is equivalent to:
   --    require('Comment').setup({})
 
-  -- "gc" to comment visual regions/lines
+  -- "gc" to comment visual regions/linesnj
   { 'numToStr/Comment.nvim', opts = {} },
+  { 'm4xshen/autoclose.nvim', opts = {} },
 
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
@@ -644,7 +645,7 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<Tab>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
@@ -699,7 +700,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'kanagawa-dragon'
+      vim.cmd.colorscheme 'habamax'
       vim.api.nvim_set_hl(0, 'Normal', { guibg = NONE })
 
       -- You can configure highlights by doing something like:
